@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio — Aamir Sohail</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+  <style>body[data-aos-duration],body[data-aos-easing]{padding:0!important}</style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+  <!-- EmailJS SDK — loaded synchronously so it's ready before DOMContentLoaded -->
+  <link rel="stylesheet" href="./stylesheet/portfolio.css"></link>
+  <script src="./scripts/portfolio.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    emailjs.init({ publicKey: 'p-iexUL_aS7YtCdXy' });
+  </script>
+  
+</head>
+<body>
+
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- ── NAV ── -->
+  <nav id="main-nav">
+    <div class="nav-logo">AS.</div>
+    <div class="nav-center">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#certifications">Certs</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button id="theme-toggle" aria-label="Toggle theme">
+        <div class="toggle-track"><div class="toggle-thumb"></div></div>
+        <span id="toggle-icon">🌙</span>
+        <span id="toggle-label">Dark</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── MOBILE MENU ── -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#about"          class="menu-link">About</a>
+    <a href="#skills"         class="menu-link">Skills</a>
+    <a href="#projects"       class="menu-link">Work</a>
+    <a href="#experience"     class="menu-link">Experience</a>
+    <a href="#certifications" class="menu-link">Certs</a>
+    <a href="#contact"        class="menu-link">Contact</a>
+  </div>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="hero-grid"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="hero-content">
+      <div class="hero-tag">✦ Salesforce Certified Developer &nbsp;·&nbsp; 3.5+ Years Experience</div>
+      <h1 class="hero-name">Aamir<br/><span>Sohail</span></h1>
+      <p class="hero-role">Salesforce Developer &amp; B2C Commerce Specialist building scalable e-commerce &amp; CRM solutions with Apex, LWC, and SFCC.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">See My Work</a>
+        <a href="#contact"  class="btn btn-outline">Get In Touch</a>
+      </div>
+    </div>
+    <div class="scroll-hint"><span>Scroll</span><div class="scroll-line"></div></div>
+  </section>
+
+  <!-- ── MARQUEE ── -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span class="marquee-item">Salesforce B2C <span>✦</span></span>
+      <span class="marquee-item">Apex <span>✦</span></span>
+      <span class="marquee-item">LWC <span>✦</span></span>
+      <span class="marquee-item">SFRA <span>✦</span></span>
+      <span class="marquee-item">Node.js <span>✦</span></span>
+      <span class="marquee-item">JavaScript <span>✦</span></span>
+      <span class="marquee-item">AWS <span>✦</span></span>
+      <span class="marquee-item">Sales Cloud <span>✦</span></span>
+      <span class="marquee-item">Salesforce B2C <span>✦</span></span>
+      <span class="marquee-item">Apex <span>✦</span></span>
+      <span class="marquee-item">LWC <span>✦</span></span>
+      <span class="marquee-item">SFRA <span>✦</span></span>
+      <span class="marquee-item">Node.js <span>✦</span></span>
+      <span class="marquee-item">JavaScript <span>✦</span></span>
+      <span class="marquee-item">AWS <span>✦</span></span>
+      <span class="marquee-item">Sales Cloud <span>✦</span></span>
+    </div>
+  </div>
+
+  <!-- ── ABOUT ── -->
+  <section id="about">
+    <div class="section-label" data-aos="fade-up">01 — About</div>
+    <div class="divider" data-aos="fade-right" data-aos-delay="100"></div>
+    <div class="about-grid">
+      <div class="about-text" data-aos="fade-right" data-aos-delay="150">
+        <h2 class="section-title">Building things<br/>that matter.</h2>
+        <p>I'm a <strong>Salesforce Developer</strong> based in <strong>Jaipur, Rajasthan</strong>, passionate about building powerful e-commerce and CRM solutions that drive real business growth.</p>
+        <p>With <strong>3.5+ years</strong> of experience at Persistent Systems and Cyntexa Labs, I specialise in <strong>Salesforce B2C Commerce (SFCC)</strong>, <strong>LWC</strong>, <strong>Apex</strong>, and end-to-end e-commerce implementations for global clients.</p>
+        <p>I hold <strong>6 Salesforce certifications</strong> including Platform Developer I, B2C Commerce Developer, and AI Associate — turning complex business requirements into elegant technical solutions.</p>
+      </div>
+      <div class="stats-grid" data-aos="fade-left" data-aos-delay="200">
+        <div class="stat-card"><div class="stat-num">3.5+</div><div class="stat-label">Years Experience</div></div>
+        <div class="stat-card"><div class="stat-num">6</div><div class="stat-label">Salesforce Certifications</div></div>
+        <div class="stat-card"><div class="stat-num">10+</div><div class="stat-label">Projects Delivered</div></div>
+        <div class="stat-card"><div class="stat-num">5+</div><div class="stat-label">Global Clients</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section id="skills">
+    <div class="section-label" data-aos="fade-up">02 — Skills</div>
+    <div class="divider" data-aos="fade-right" data-aos-delay="100"></div>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">What I work with.</h2>
+    <div class="skills-wrapper" data-aos="fade-up" data-aos-delay="180">
+      <span class="skill-pill">Salesforce B2C Commerce</span>
+      <span class="skill-pill">Apex</span>
+      <span class="skill-pill">LWC</span>
+      <span class="skill-pill">JavaScript</span>
+      <span class="skill-pill">ISML</span>
+      <span class="skill-pill">SFRA</span>
+      <span class="skill-pill">Node.js</span>
+      <span class="skill-pill">HTML / CSS / SCSS</span>
+      <span class="skill-pill">Sales Cloud</span>
+      <span class="skill-pill">Service Cloud</span>
+      <span class="skill-pill">Salesforce Flows</span>
+      <span class="skill-pill">SOQL / SOSL</span>
+      <span class="skill-pill">Salesforce OMS</span>
+      <span class="skill-pill">AWS</span>
+      <span class="skill-pill">JSForce</span>
+      <span class="skill-pill">Git / GitHub / Bitbucket</span>
+      <span class="skill-pill">Agile / Scrum</span>
+      <span class="skill-pill">Page Designer</span>
+      <span class="skill-pill">JIRA</span>
+    </div>
+    <div class="skill-bars" data-aos="fade-up" data-aos-delay="260">
+      <div class="skill-bar-item">
+        <div class="skill-bar-top"><span>Salesforce B2C Commerce / SFCC</span><span>95%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-top"><span>Apex &amp; LWC Development</span><span>90%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-top"><span>JavaScript / Node.js</span><span>85%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-top"><span>Salesforce Admin &amp; Flows</span><span>88%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <section id="projects">
+    <div class="section-label" data-aos="fade-up">03 — Work</div>
+    <div class="divider" data-aos="fade-right" data-aos-delay="100"></div>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Selected projects.</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-thumb"><span class="project-thumb-icon">🚗</span>
+          <div class="project-overlay"><a href="#" class="overlay-btn">Case Study</a></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">SFCC</span><span class="project-tag">Sales Cloud</span><span class="project-tag">Node.js</span><span class="project-tag">AWS</span></div>
+          <div class="project-name">Australian Car Website</div>
+          <div class="project-meta">🏢 Persistent Systems &nbsp;·&nbsp; Lead Software Engineer &nbsp;·&nbsp; Mar 2025–Present</div>
+          <p class="project-desc">Large-scale e-commerce platform integrating Salesforce Sales Cloud, Service Cloud, SAP, NodeJS &amp; AWS. Built Page Designer components, GA4 analytics, PDP configurations, and a secure Forms framework.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-thumb"><span class="project-thumb-icon">⚙️</span>
+          <div class="project-overlay"><a href="#" class="overlay-btn">Case Study</a></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">Salesforce</span><span class="project-tag">LWC</span><span class="project-tag">JSForce</span><span class="project-tag">AWS</span></div>
+          <div class="project-name">Salesforce Deployment System</div>
+          <div class="project-meta">🏢 Cyntexa Labs &nbsp;·&nbsp; Software Developer &nbsp;·&nbsp; Jun–Dec 2024</div>
+          <p class="project-desc">Centralised deployment system for Israel-based SaaS clients. Custom automation tools, JSForce + AWS middleware, LWC integration, and rollback/backup functionality for multi-client deployments.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-thumb"><span class="project-thumb-icon">🧸</span>
+          <div class="project-overlay"><a href="#" class="overlay-btn">Case Study</a></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">SFCC</span><span class="project-tag">SFRA</span><span class="project-tag">Apex</span><span class="project-tag">Adyen</span></div>
+          <div class="project-name">Teddy Bear Manufacturer</div>
+          <div class="project-meta">🏢 Cyntexa Labs &nbsp;·&nbsp; Software Developer &nbsp;·&nbsp; Feb–Oct 2024</div>
+          <p class="project-desc">SiteGenesis → SFRA migration. PLP/PDP/CLP components, gift product, Loyalty program (Core Cloud), Adyen payment &amp; donation integration, GA4 analytics, and third-party data sync jobs.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-thumb"><span class="project-thumb-icon">🛒</span>
+          <div class="project-overlay"><a href="#" class="overlay-btn">Case Study</a></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">SFCC</span><span class="project-tag">ISML</span><span class="project-tag">B2C Commerce</span></div>
+          <div class="project-name">Single Page Checkout</div>
+          <div class="project-meta">🏢 Cyntexa Labs &nbsp;·&nbsp; Assoc. Developer &nbsp;·&nbsp; Jun–Dec 2023</div>
+          <p class="project-desc">Flash single-page checkout for a USA client's SFCC storefronts (hair &amp; men's grooming). Users land from ads on one unified page to browse, update cart, and pay — boosting engagement and sales.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-thumb"><span class="project-thumb-icon">💎</span>
+          <div class="project-overlay"><a href="#" class="overlay-btn">Case Study</a></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">B2C Commerce</span><span class="project-tag">LWC</span><span class="project-tag">Apex</span><span class="project-tag">OMS</span></div>
+          <div class="project-name">Online Jewelry Store</div>
+          <div class="project-meta">🏢 Cyntexa Labs &nbsp;·&nbsp; Assoc. Developer &nbsp;·&nbsp; Nov 2022–May 2023</div>
+          <p class="project-desc">SFCC migration for a jewelry brand. Custom dropdowns, Bootstrap Calendar, price range slider, Page Designer components, Chatbot, OMS integration, and "Notify Me" back-in-stock emails.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-thumb"><span class="project-thumb-icon">💄</span>
+          <div class="project-overlay"><a href="#" class="overlay-btn">Case Study</a></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">SFCC</span><span class="project-tag">B2C Commerce</span><span class="project-tag">HBS</span></div>
+          <div class="project-name">Beauty Products — L'Oréal</div>
+          <div class="project-meta">🏢 Cyntexa Labs &nbsp;·&nbsp; Assoc. Developer &nbsp;·&nbsp; Mar–Oct 2022</div>
+          <p class="project-desc">Production support for L'Oréal's multi-site SFCC architecture. Resolved high-severity issues before SLA, implemented gift product &amp; Wishlist via Product List API, and built custom HBS components.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EXPERIENCE ── -->
+  <section id="experience">
+    <div class="section-label" data-aos="fade-up">04 — Experience</div>
+    <div class="divider" data-aos="fade-right" data-aos-delay="100"></div>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Where I've worked.</h2>
+    <div class="timeline">
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="120">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">March 2025 — Present</div>
+        <div class="timeline-role">Lead Software Engineer</div>
+        <div class="timeline-company">Persistent Systems · Jaipur, India</div>
+        <p class="timeline-desc">Leading development of an Australian automotive e-commerce platform integrating Salesforce Sales Cloud, Service Cloud, SAP, NodeJS, and AWS. Building Page Designer components, GA4 analytics, PDP configurations, ISML components, and secure Forms frameworks.</p>
+      </div>
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="180">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">Feb 2025 — Feb 2025</div>
+        <div class="timeline-role">Salesforce Developer</div>
+        <div class="timeline-company">Astrea IT Services · Jaipur, India</div>
+        <p class="timeline-desc">Short-term Salesforce engagement focused on platform configuration, customisation, and targeted solutions for client requirements.</p>
+      </div>
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="240">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">Dec 2021 — Jan 2025</div>
+        <div class="timeline-role">Associate → Software Developer</div>
+        <div class="timeline-company">Cyntexa Labs Pvt Ltd · Jaipur, India</div>
+        <p class="timeline-desc">3+ years delivering Salesforce B2C Commerce solutions for global clients across USA and Israel. Completed SFRA migrations, built centralised deployment systems, single-page checkout flows, jewelry store migrations, and provided L'Oréal production support across 5 major projects.</p>
+      </div>
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">2018 — 2022</div>
+        <div class="timeline-role">B.Tech — Computer Science</div>
+        <div class="timeline-company">Anand International College of Engineering · Jaipur, Rajasthan</div>
+        <p class="timeline-desc">Bachelor of Technology with focus on software engineering fundamentals. Graduated 2022 and joined Cyntexa Labs directly upon completion.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CERTIFICATIONS ── -->
+  <section id="certifications">
+    <div class="section-label" data-aos="fade-up">05 — Certifications</div>
+    <div class="divider" data-aos="fade-right" data-aos-delay="100"></div>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Salesforce Certified.</h2>
+    <div class="cert-grid" data-aos="fade-up" data-aos-delay="180">
+      <div class="cert-card"><span class="cert-icon">🏆</span><span class="cert-name">Salesforce Certified Administrator</span></div>
+      <div class="cert-card"><span class="cert-icon">🏆</span><span class="cert-name">Salesforce Certified B2C Commerce Developer</span></div>
+      <div class="cert-card"><span class="cert-icon">🏆</span><span class="cert-name">Salesforce Certified Platform Developer I</span></div>
+      <div class="cert-card"><span class="cert-icon">🏆</span><span class="cert-name">Salesforce Certified JavaScript Developer I</span></div>
+      <div class="cert-card"><span class="cert-icon">🏆</span><span class="cert-name">Salesforce Certified Data Cloud Consultant</span></div>
+      <div class="cert-card"><span class="cert-icon">🏆</span><span class="cert-name">Salesforce Certified AI Associate</span></div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact">
+    <div class="section-label" data-aos="fade-up">06 — Contact</div>
+    <div class="divider" data-aos="fade-right" data-aos-delay="100"></div>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Let's build<br/>something great.</h2>
+    <a href="mailto:eraamirsohail@proton.me" class="contact-email aos-init aos-animate" data-aos="fade-up" data-aos-delay="180">eraamirsohail@proton.me</a>
+    <p class="contact-sub" data-aos="fade-up" data-aos-delay="240">Open to freelance, full-time Salesforce roles, and interesting collaborations.<br/>Usually respond within 24 hours.</p>
+
+    <!-- ── CONTACT FORM ── -->
+    <div class="contact-form-wrap" data-aos="fade-up" data-aos-delay="300">
+      <div class="contact-form-title">Send me a message</div>
+
+      <div class="cf-field">
+        <label for="cf-name">Your Name</label>
+        <input type="text" id="cf-name" placeholder="e.g. Jane Smith" maxlength="100" autocomplete="name" />
+      </div>
+
+      <div class="cf-field">
+        <label for="cf-email">Email Address</label>
+        <input type="email" id="cf-email" placeholder="you@example.com" maxlength="150" autocomplete="email" />
+      </div>
+
+      <div class="cf-field">
+        <label>Message</label>
+        <div class="rte-wrap" id="rte-wrap">
+
+          <!-- TOOLBAR -->
+          <div class="rte-toolbar" id="rte-toolbar">
+
+            <!-- Text style -->
+            <button class="rte-btn" data-tip="Font size" id="rte-font-btn" onmousedown="toggleFontMenu(event)" aria-label="Font size">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><text x="0" y="13" font-size="11" fill="currentColor" stroke="none" font-family="serif" font-weight="700">Aa</text></svg>
+            </button>
+
+            <div class="rte-divider"></div>
+
+            <!-- Bold, Italic, Underline, Strikethrough -->
+            <button class="rte-btn" data-cmd="bold"          data-tip="Bold (Ctrl+B)"          aria-label="Bold">
+              <svg width="13" height="13" viewBox="0 0 14 14" fill="currentColor"><path d="M3 2h4.5a3 3 0 010 6H3V2zm0 6h5a3 3 0 010 6H3V8z"/></svg>
+            </button>
+            <button class="rte-btn" data-cmd="italic"        data-tip="Italic (Ctrl+I)"        aria-label="Italic">
+              <svg width="13" height="13" viewBox="0 0 14 14" fill="currentColor"><path d="M5 2h6v2H9.5L6.5 10H8v2H2v-2h1.5l3-6H5V2z"/></svg>
+            </button>
+            <button class="rte-btn" data-cmd="underline"     data-tip="Underline (Ctrl+U)"     aria-label="Underline">
+              <svg width="13" height="13" viewBox="0 0 14 14" fill="currentColor"><path d="M3 2v5a4 4 0 008 0V2h-2v5a2 2 0 01-4 0V2H3zm-1 9h10v1H2v-1z"/></svg>
+            </button>
+            <button class="rte-btn" data-cmd="strikeThrough" data-tip="Strikethrough"          aria-label="Strikethrough">
+              <svg width="13" height="13" viewBox="0 0 14 14" fill="currentColor"><path d="M1 7h12v1.2H1V7zm3.5-4.5C5.3 2 6.1 2 7 2c1.6 0 3 .7 3 2.1 0 .4-.1.8-.3 1.1H7.5c.2-.3.3-.6.3-.9 0-.8-.7-1.1-1.7-1.1-.9 0-1.4.3-1.4.8 0 .3.2.5.5.7H3.3c-.4-.4-.6-.9-.6-1.4C2.7 2.6 3.8 2.5 4.5 2.5zM9 9.2c0 1.5-1.4 2.3-3.1 2.3-1.8 0-3.1-.9-3.1-2.5h2c0 .7.5 1.1 1.2 1.1.7 0 1.2-.3 1.2-.8 0-.3-.2-.6-.5-.8H9c0 .2.1.4.1.7z"/></svg>
+            </button>
+
+            <div class="rte-divider"></div>
+
+            <!-- Lists -->
+            <button class="rte-btn" data-cmd="insertUnorderedList" data-tip="Bullet list" aria-label="Bullet list">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><circle cx="2" cy="4" r="1.5"/><rect x="5" y="3" width="9" height="2" rx="1"/><circle cx="2" cy="8" r="1.5"/><rect x="5" y="7" width="9" height="2" rx="1"/><circle cx="2" cy="12" r="1.5"/><rect x="5" y="11" width="9" height="2" rx="1"/></svg>
+            </button>
+            <button class="rte-btn" data-cmd="insertOrderedList" data-tip="Numbered list" aria-label="Numbered list">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><text x="0" y="5.5" font-size="5" font-weight="700" font-family="monospace">1.</text><rect x="5" y="3" width="9" height="2" rx="1"/><text x="0" y="9.5" font-size="5" font-weight="700" font-family="monospace">2.</text><rect x="5" y="7" width="9" height="2" rx="1"/><text x="0" y="13.5" font-size="5" font-weight="700" font-family="monospace">3.</text><rect x="5" y="11" width="9" height="2" rx="1"/></svg>
+            </button>
+
+            <div class="rte-divider"></div>
+
+            <!-- Attachment -->
+            <button class="rte-btn" data-tip="Attach file" id="rte-attach-btn" aria-label="Attach file">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M13.5 8.5L7 15a4 4 0 01-5.66-5.66l7-7a2.5 2.5 0 013.54 3.54L5.5 12.2a1 1 0 01-1.42-1.42L10 5"/></svg>
+            </button>
+            <input type="file" id="rte-file-input" multiple style="display:none" accept="*/*">
+
+            <!-- Link -->
+            <button class="rte-btn" data-tip="Insert link" id="rte-link-btn" aria-label="Insert link">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6.5 9.5a3.54 3.54 0 005 0l2-2a3.54 3.54 0 00-5-5L7 4"/><path d="M9.5 6.5a3.54 3.54 0 00-5 0l-2 2a3.54 3.54 0 005 5L9 12"/></svg>
+            </button>
+
+            <!-- Emoji -->
+            <button class="rte-btn" data-tip="Emoji" id="rte-emoji-btn" aria-label="Emoji">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6.5"/><circle cx="5.5" cy="6.5" r=".9" fill="currentColor" stroke="none"/><circle cx="10.5" cy="6.5" r=".9" fill="currentColor" stroke="none"/><path d="M5 10s1 2 3 2 3-2 3-2" stroke-linecap="round"/></svg>
+            </button>
+
+            <!-- Blockquote -->
+            <button class="rte-btn" data-cmd="formatBlock" data-val="blockquote" data-tip="Quote" aria-label="Quote">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M2 4h3v3H3c0 1.7.9 2.7 2 3v1.5C2.5 11 1 9 1 6.5V4h1zm7 0h3v3h-2c0 1.7.9 2.7 2 3v1.5C9.5 11 8 9 8 6.5V4h1z" opacity=".9"/></svg>
+            </button>
+
+            <!-- Image inline -->
+            <button class="rte-btn" data-tip="Insert image" id="rte-img-btn" aria-label="Insert image">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1.5" y="2.5" width="13" height="11" rx="1.5"/><path d="M1.5 10l3.5-3.5 3 3 2.5-2.5 3.5 4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="5.5" cy="6" r="1.2" fill="currentColor" stroke="none"/></svg>
+            </button>
+            <input type="file" id="rte-img-input" style="display:none" accept="image/*">
+
+            <div class="rte-divider"></div>
+
+            <!-- Clear formatting -->
+            <button class="rte-btn" data-tip="Clear formatting" id="rte-clear-btn" aria-label="Clear formatting">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 4h12M6 4V2h4v2M4 4l1 10h6l1-10M8 7v4M6 7l.3 4M10 7l-.3 4"/></svg>
+            </button>
+
+            <div class="rte-spacer"></div>
+
+            <!-- Delete / clear message -->
+            <button class="rte-btn" data-tip="Clear message" id="rte-trash-btn" aria-label="Clear message" style="color:var(--accent2)">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 4h12M6 4V2h4v2M4 4l1 10h6l1-10M8 7v4M6 7l.3 4M10 7l-.3 4"/></svg>
+            </button>
+          </div>
+
+          <!-- Emoji picker panel — positioned absolute inside rte-wrap -->
+          <div class="emoji-picker" id="emoji-picker" style="display:none">
+            <div class="emoji-search-wrap">
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" style="flex-shrink:0;opacity:.5"><circle cx="6.5" cy="6.5" r="5"/><path d="M11 11l3 3"/></svg>
+              <input type="text" id="emoji-search" placeholder="Search emoji…" autocomplete="off" />
+            </div>
+            <div class="emoji-grid" id="emoji-grid"></div>
+            <div class="emoji-empty" id="emoji-empty" style="display:none">No results</div>
+          </div>
+
+          <!-- Font size dropdown — positioned absolute inside rte-wrap -->
+          <div id="font-menu" style="display:none;position:absolute;z-index:300;background:var(--surface);border:1px solid var(--border);border-radius:var(--rad);padding:.4rem;box-shadow:0 8px 30px rgba(0,0,0,.4);min-width:130px;">
+            <button onmousedown="applyFontSize('1')" style="display:block;width:100%;text-align:left;padding:.3rem .7rem;background:none;border:none;color:var(--muted);font-family:var(--fm);font-size:.65rem;cursor:pointer;border-radius:5px;" onmouseover="this.style.background='var(--border)'" onmouseout="this.style.background='none'">Small</button>
+            <button onmousedown="applyFontSize('3')" style="display:block;width:100%;text-align:left;padding:.3rem .7rem;background:none;border:none;color:var(--text);font-family:var(--fm);font-size:.82rem;cursor:pointer;border-radius:5px;" onmouseover="this.style.background='var(--border)'" onmouseout="this.style.background='none'">Normal</button>
+            <button onmousedown="applyFontSize('4')" style="display:block;width:100%;text-align:left;padding:.3rem .7rem;background:none;border:none;color:var(--text);font-family:var(--fh);font-size:1rem;font-weight:700;cursor:pointer;border-radius:5px;" onmouseover="this.style.background='var(--border)'" onmouseout="this.style.background='none'">Large</button>
+            <button onmousedown="applyFontSize('5')" style="display:block;width:100%;text-align:left;padding:.3rem .7rem;background:none;border:none;color:var(--text);font-family:var(--fh);font-size:1.2rem;font-weight:800;cursor:pointer;border-radius:5px;" onmouseover="this.style.background='var(--border)'" onmouseout="this.style.background='none'">Heading</button>
+          </div>
+
+          <!-- EDITABLE BODY -->
+          <div class="rte-body" id="rte-body" contenteditable="true"
+               data-placeholder="Tell me about your project, role, or just say hi…"
+               role="textbox" aria-multiline="true" aria-label="Message"></div>
+
+          <!-- FOOTER: attachments + char count -->
+          <div class="rte-footer">
+            <div class="rte-attachments" id="rte-attachments"></div>
+            <div class="rte-char-count"><span id="cf-chars">0</span> chars</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Link modal -->
+      <div class="rte-modal" id="rte-link-modal" style="display:none">
+        <div class="rte-modal-box">
+          <h4>Insert Link</h4>
+          <input type="text" id="rte-link-text" placeholder="Link text (optional)" />
+          <input type="url"  id="rte-link-url"  placeholder="https://example.com" />
+          <div class="rte-modal-btns">
+            <button class="rte-cancel" onclick="closeLinkModal()">Cancel</button>
+            <button class="rte-ok"     onclick="insertLink()">Insert</button>
+          </div>
+        </div>
+      </div>
+
+      <button class="cf-submit" id="cf-submit">
+        <span class="btn-text">Send Message ✦</span>
+        <span class="btn-spinner"></span>
+      </button>
+
+      <div class="cf-message" id="cf-message"></div>
+    </div>
+
+    <div class="social-row" data-aos="fade-up" data-aos-delay="360">
+      <a href="#" class="social-link" title="GitHub">GH</a>
+      <a href="#" class="social-link" title="LinkedIn">LI</a>
+      <a href="#" class="social-link" title="Twitter/X">𝕏</a>
+      <a href="#" class="social-link" title="Trailhead">TH</a>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <span>© 2025 Aamir Sohail. All rights reserved.</span>
+    <span>Salesforce Developer · Jaipur, India</span>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+</body>
+</html>
