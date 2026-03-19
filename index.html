@@ -69,6 +69,10 @@
       <div class="hero-cta">
         <a href="#projects" class="btn btn-primary">See My Work</a>
         <a href="#contact"  class="btn btn-outline">Get In Touch</a>
+        <button class="btn btn-resume" id="resume-btn" aria-label="View Resume">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="1" width="10" height="14" rx="1.5"/><path d="M6 5h4M6 8h4M6 11h2"/></svg>
+          Résumé
+        </button>
       </div>
     </div>
     <div class="scroll-hint"><span>Scroll</span><div class="scroll-line"></div></div>
@@ -462,5 +466,23 @@
   </footer>
 
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <!-- ── RESUME MODAL ── -->
+  <div id="resume-modal" role="dialog" aria-modal="true" aria-label="Resume preview">
+    <div class="resume-modal-bar">
+      <div class="resume-modal-title">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="1" width="10" height="14" rx="1.5"/><path d="M6 5h4M6 8h4M6 11h2"/></svg>
+        Aamir Sohail &nbsp;<span>/ Résumé</span>
+      </div>
+      <div class="resume-modal-actions">
+        <a class="resume-dl-btn" id="resume-dl-btn" href="#" download="Aamir_Sohail_Resume.pdf" target="_blank">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v8M5 7l3 3 3-3M2 13h12"/></svg>
+          Download
+        </a>
+        <button class="resume-close-btn" id="resume-close-btn" aria-label="Close resume">✕</button>
+      </div>
+    </div>
+    <div class="resume-frame-wrap" id="resume-frame-wrap">
+      <!-- PDF renders here if RESUME_PDF_URL is set -->
+    </div>
 </body>
 </html>
