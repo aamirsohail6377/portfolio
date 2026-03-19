@@ -195,6 +195,73 @@
     .btn-primary:hover { background: #fff; transform: translateY(-2px); box-shadow: 0 12px 40px rgba(232,255,72,.3); }
     .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
     .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+    .btn-resume {
+      background: transparent; color: var(--muted);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; gap: .5rem;
+    }
+    .btn-resume:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+
+    /* ─── RESUME MODAL ─── */
+    #resume-modal {
+      position: fixed; inset: 0; z-index: 800;
+      background: rgba(0,0,0,.85); backdrop-filter: blur(8px);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: flex-start;
+      opacity: 0; pointer-events: none;
+      transition: opacity .3s ease;
+    }
+    #resume-modal.open { opacity: 1; pointer-events: all; }
+    .resume-modal-bar {
+      width: 100%; max-width: 860px;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 1.5rem;
+      flex-shrink: 0;
+    }
+    .resume-modal-title {
+      font-family: var(--fh); font-size: .85rem; font-weight: 700;
+      color: var(--text); letter-spacing: .04em;
+      display: flex; align-items: center; gap: .5rem;
+    }
+    .resume-modal-title span { color: var(--accent); }
+    .resume-modal-actions { display: flex; align-items: center; gap: .7rem; }
+    .resume-dl-btn {
+      display: flex; align-items: center; gap: .45rem;
+      padding: .5rem 1.1rem;
+      background: var(--accent); color: #0a0a0f;
+      border: none; border-radius: 8px;
+      font-family: var(--fm); font-size: .75rem; font-weight: 500;
+      letter-spacing: .07em; cursor: pointer;
+      transition: all .25s;
+    }
+    .resume-dl-btn:hover { background: #fff; transform: translateY(-1px); }
+    .resume-close-btn {
+      width: 34px; height: 34px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 8px; color: var(--muted); cursor: pointer;
+      font-size: 1rem; transition: all .2s;
+    }
+    .resume-close-btn:hover { border-color: var(--accent2); color: var(--accent2); }
+    .resume-frame-wrap {
+      flex: 1; width: 100%; max-width: 860px;
+      padding: 0 1.5rem 1.5rem;
+      display: flex; flex-direction: column;
+      min-height: 0;
+    }
+    .resume-frame-wrap iframe {
+      width: 100%; height: 100%; flex: 1;
+      border: none; border-radius: var(--rad);
+      background: #fff;
+      box-shadow: 0 20px 60px rgba(0,0,0,.5);
+    }
+    .resume-no-pdf {
+      flex: 1; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 1rem;
+      color: var(--muted); font-size: .85rem; text-align: center;
+    }
+    .resume-no-pdf svg { opacity: .3; }
+    .resume-no-pdf strong { color: var(--text); font-size: 1rem; display: block; margin-bottom: .3rem; }
     .scroll-hint {
       position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
       display: flex; flex-direction: column; align-items: center; gap: .4rem;
@@ -668,6 +735,7 @@
       .hero-role { font-size: clamp(.82rem,3.8vw,.98rem); max-width: 100%; }
       .hero-cta { flex-direction: column; gap: .6rem; margin-top: 1.6rem; }
       .btn { width: 100%; text-align: center; padding: .82rem 1rem; font-size: .76rem; }
+      .btn-resume { justify-content: center; }
       .blob-1 { width: 200px; height: 200px; top: -40px; right: -50px; filter: blur(50px); }
       .blob-2 { width: 150px; height: 150px; filter: blur(40px); }
       .scroll-hint { display: none; }
